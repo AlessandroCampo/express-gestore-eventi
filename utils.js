@@ -3,6 +3,12 @@ const path = require('path');
 
 
 
-const writeInFile = () => {
+class CustomError extends Error {
+    constructor(message, status) {
+        super(message)
+    }
+}
 
+module.exports = {
+    CustomError
 }

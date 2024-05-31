@@ -19,31 +19,40 @@ module.exports = class Model {
         return require('../db/events.json')
     };
 
-    static async createEvent(newEvent) {
-        const newEvents = JSON.stringify([...Model.getEvents(), { ...newEvent }])
-        await fs.writeFile(dbPath, newEvents, 'utf-8', () => {
-            console.log(`Successfully created a new event with title ${newEvent.title}`)
-        })
+    static createEvent(newEvent) {
+        const newEvents = JSON.stringify([...Model.getEvents(), { ...newEvent }]);
+        fs.writeFileSync(dbPath, newEvents, 'utf-8');
+        console.log(`Successfully created a new event with title ${newEvent.title}`);
     };
 
-    static async deleteEvent(id) {
+    static findEvent(id) {
+        return Model.getEvents().find(e => e.id === Number(id));
+    }
+
+    static deleteEvent(id) {
         const newEvents = JSON.stringify(Model.getEvents().filter(e => e.id !== id));
-        await fs.writeFile(dbPath, newEvents, 'utf-8', () => {
-            console.log(`Successfully deleted the event with id ${id}`)
-        })
+        fs.writeFileSync(dbPath, newEvents, 'utf-8')
+        console.log(`Successfully deleted the event with id ${id}`)
     }
 
     static modifyEvent(id, newEvent) {
+        const convertedID = Number(id)
         const updatedEvents = Model.getEvents().map(event => {
-            if (event.id === id) {
-                return {
-                    newEvent
+            if (event.id === convertedID) {
+                const updatedEvent = {
+                    ...event,
+                    title: newEvent.title !== undefined ? newEvent.title : event.title,
+                    description: newEvent.description !== undefined ? newEvent.description : event.description,
+                    date: newEvent.date !== undefined ? newEvent.date : event.date,
+                    maxSeats: newEvent.maxSeats !== undefined ? newEvent.maxSeats : event.maxSeats,
                 };
+                return updatedEvent;
             }
             return event;
         });
         fs.writeFileSync(dbPath, JSON.stringify(updatedEvents), 'utf8');
         console.log(`Successfully modified an event with id ${id}`)
+        return Model.findEvent(convertedID);
     }
 
 
