@@ -16,7 +16,6 @@ module.exports = class Model {
     }
 
 
-
     static getEvents() {
         return require('../db/events.json')
     };
@@ -68,6 +67,7 @@ module.exports = class Model {
                     description: newEvent.description !== undefined ? newEvent.description : event.description,
                     date: newEvent.date !== undefined ? newEvent.date : event.date,
                     maxSeats: newEvent.maxSeats !== undefined ? newEvent.maxSeats : event.maxSeats,
+                    availableSeats: newEvent.availableSeats !== undefined ? newEvent.availableSeats : event.availableSeats,
                 };
                 return updatedEvent;
             }

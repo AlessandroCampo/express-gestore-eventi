@@ -3,6 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const dbPath = path.join(process.cwd(), 'db', 'reservations.json');
 
+
+
 module.exports = class Reservation {
     id
     constructor({ firstName, lastName, email, eventId }) {
@@ -23,8 +25,14 @@ module.exports = class Reservation {
     }
 
     static create(newReservation) {
+        const eventModel = require('../models/Event.js');
         const newEvents = JSON.stringify([...Reservation.getAllReservations(), { ...newReservation }]);
         fs.writeFileSync(dbPath, newEvents, 'utf-8');
+
+        const relatedEvent = eventModel.findEvent(newReservation.eventId);
+        relatedEvent.availableSeats--
+        console.log(relatedEvent.availableSeats);
+        eventModel.modifyEvent(relatedEvent.id, { ...relatedEvent })
         console.log(`Successfully created a new reservation for ${newReservation.firstName} ${newReservation.lastName}`);
     }
 

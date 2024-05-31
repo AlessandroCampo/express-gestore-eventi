@@ -37,7 +37,7 @@
         "description": "Step into the vibrant world of Lady Gaga as she performs songs from her latest album, Chromatica, live on stage.",
         "date": "2025-02-20",
         "maxSeats": 30000,
-        "availableSeats": 30000
+        "availableSeats": 29998
     },
     {
         "id": "event-11",
