@@ -19,9 +19,9 @@
         "id": "event-8",
         "title": "Adele: Live in Concert",
         "description": "Don't miss Adele's powerful and emotional performances as she showcases her incredible vocals.",
-        "date": "2024-11-05",
-        "maxSeats": 28000,
-        "availableSeats": 28000
+        "date": "1900-11-05",
+        "maxSeats": 0,
+        "availableSeats": 0
     },
     {
         "id": "event-9",
@@ -35,9 +35,9 @@
         "id": "event-10",
         "title": "Lady Gaga: The Chromatica Ball Tour",
         "description": "Step into the vibrant world of Lady Gaga as she performs songs from her latest album, Chromatica, live on stage.",
-        "date": "2025-02-20",
-        "maxSeats": 30000,
-        "availableSeats": 29998
+        "date": "1999-02-20",
+        "maxSeats": 0,
+        "availableSeats": 0
     },
     {
         "id": "event-11",
@@ -77,6 +77,6 @@
         "description": "Be captivated by Shawn Mendes' soulful voice and heartfelt performances as he embarks on his Wonder World Tour.",
         "date": "2025-07-15",
         "maxSeats": 35000,
-        "availableSeats": 35000
+        "availableSeats": 34993
     }
 ]

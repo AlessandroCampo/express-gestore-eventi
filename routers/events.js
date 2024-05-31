@@ -9,6 +9,7 @@ const eventExists = require('../middlewares/eventExists.js');
 const reservationExists = require('../middlewares/reservationExists.js');
 const validateStoreEventData = require('../middlewares/validateStoreEventData.js');
 const validateStoreReservationData = require('../middlewares/validateStoreReservationData.js');
+const isReservationValid = require('../middlewares/isReservationValid.js');
 
 
 router.use(express.urlencoded({ extended: true }))
@@ -23,7 +24,7 @@ router.put('/:eventId', eventsController.update);
 router.get('/:eventId', eventsController.show);
 router.delete('/:eventId', eventsController.destroy);
 router.get('/:eventId/reservations', reservationController.index);
-router.post('/:eventId/reservations', validateStoreReservationData, reservationController.store);;
+router.post('/:eventId/reservations', validateStoreReservationData, isReservationValid, reservationController.store);
 router.delete('/:eventId/reservations/:reservationId', reservationExists, reservationController.destroy);
 
 

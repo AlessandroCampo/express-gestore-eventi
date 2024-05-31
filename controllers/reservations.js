@@ -11,13 +11,15 @@ const index = (req, res) => {
 
 
 const store = (req, res) => {
+
     const { firstName, lastName, email } = req.body;
     const { eventId } = req.params;
-    const newEvent = new reservationModel({ firstName, lastName, email, eventId })
+    const newRes = new reservationModel({ firstName, lastName, email, eventId })
     res.json({
         message: 'Your reservation has been succesfully created',
-        newEvent
+        newRes
     });
+
 }
 
 const destroy = (req, res) => {
