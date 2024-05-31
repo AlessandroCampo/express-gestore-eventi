@@ -6,7 +6,7 @@ const reservationModel = require('../models/Reservation.js');
 module.exports = class Model {
     id
     constructor({ title, description, date, maxSeats }) {
-        this.id = uniquid();
+        this.id = uniquid('event-');
         this.title = title;
         this.description = description;
         this.date = date;
@@ -23,6 +23,7 @@ module.exports = class Model {
 
     static getReservations(id) {
         const convertedID = Number(id);
+        console.log(convertedID);
         return reservationModel.getAllReservations().filter(r => r.eventId == convertedID);
     }
 

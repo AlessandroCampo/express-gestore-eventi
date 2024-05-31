@@ -8,7 +8,7 @@ const morgan = require('morgan');
 const eventsRouter = require('./routers/events.js');
 
 //global middlewares
-app.use(morgan('short'));
+app.use(morgan('dev'));
 app.use(express.json());
 
 
@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/events', eventsRouter);
+
 
 
 //404 routes middlware

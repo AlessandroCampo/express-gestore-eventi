@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const eventsController = require('../controllers/events.js');
+const reservationController = require('../controllers/reservations.js');
 
-const reservationRouter = require('../routers/reservations.js');
 
 //import and usage middlewares
 const eventExists = require('../middlewares/eventExists.js');
@@ -18,6 +18,9 @@ router.put('/:eventId', eventExists, eventsController.update);
 router.get('/:eventId', eventExists, eventsController.show);
 router.delete('/:eventId', eventExists, eventsController.destroy);
 
-router.use('/:eventId/reservations', reservationRouter);
+router.get('/:eventId/reservations', reservationController.index);
+router.post('/:eventId/reservations', reservationController.index);;
+router.delete('/:eventId/:reservationId', reservationController.destroy);
+
 
 module.exports = router;

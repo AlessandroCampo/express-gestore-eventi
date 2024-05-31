@@ -1,5 +1,9 @@
+const eventModel = require('../models/Event.js');
+
+
 const index = (req, res) => {
-    res.send('nested router working')
+    const foundReservations = eventModel.getReservations(req.params.eventId);
+    res.send(foundReservations);
 }
 
 const store = (req, res) => {
