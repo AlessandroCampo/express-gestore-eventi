@@ -1,6 +1,6 @@
 const eventModel = require('../models/Event.js');
 
-eventModel.getEvents();
+console.log(eventModel.getEvents());
 
 
 const index = (req, res) => {

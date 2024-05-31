@@ -1,7 +1,4 @@
 const uniquid = require('uniqid')
-const fs = require('fs');
-const path = require('path');
-
 
 module.exports = class Model {
     #id
@@ -18,8 +15,7 @@ module.exports = class Model {
     };
 
     static getEvents() {
-        const dbPath = path.join(__dirname, '../db/events.json');
-        console.log(dbPath);
+        return require('../db/events.json')
     };
 
 
