@@ -20,8 +20,9 @@ const events = eventModel.getEvents()
 
 
 const index = (req, res) => {
-    if (!events) throw new CustomError('Error retrieving events data', 500)
-    res.json(events)
+    if (!events) throw new CustomError('Error retrieving events data', 500);
+    const filteredEvents = eventModel.filterEvents(req.query);
+    res.json(filteredEvents)
 }
 
 const store = (req, res) => {

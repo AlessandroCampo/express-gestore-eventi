@@ -10,6 +10,7 @@ module.exports = class Model {
         this.description = description;
         this.date = date;
         this.maxSeats = maxSeats;
+        this.availableSeats = maxSeats;
         Model.createEvent(this);
     }
 
@@ -18,6 +19,24 @@ module.exports = class Model {
     static getEvents() {
         return require('../db/events.json')
     };
+
+    static filterEvents(query) {
+        const possibleFilters = ['max_date', 'min_date', 'not_sold_out', 'title_contains'];
+        const filterFunctions = {
+            max_date: event => !query.max_date || event.date <= query.max_date,
+            min_date: event => !query.min_date || event.date >= query.min_date,
+            not_sold_out: event => !query.not_sold_out || event.availableSeats > 0,
+            title_contains: event => !query.title_contains || event.title.includes(query.title_contains)
+        };
+
+        const filteredEvents = possibleFilters.reduce((acc, filter) => {
+            if (query[filter]) {
+                return acc.filter(filterFunctions[filter])
+            }
+            return acc
+        }, Model.getEvents());
+        return filteredEvents;
+    }
 
     static createEvent(newEvent) {
         const newEvents = JSON.stringify([...Model.getEvents(), { ...newEvent }]);
