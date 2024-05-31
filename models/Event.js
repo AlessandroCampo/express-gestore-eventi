@@ -2,6 +2,7 @@ const uniquid = require('uniqid')
 const fs = require('fs');
 const path = require('path');
 const dbPath = path.join(process.cwd(), 'db', 'events.json');
+const reservationModel = require('../models/Reservation.js');
 module.exports = class Model {
     id
     constructor({ title, description, date, maxSeats }) {
@@ -19,6 +20,11 @@ module.exports = class Model {
     static getEvents() {
         return require('../db/events.json')
     };
+
+    static getReservations(id) {
+        const convertedID = Number(id);
+        return reservationModel.getAllReservations().filter(r => r.eventId == convertedID);
+    }
 
     static filterEvents(query) {
         const possibleFilters = ['max_date', 'min_date', 'not_sold_out', 'title_contains'];

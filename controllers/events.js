@@ -35,13 +35,13 @@ const store = (req, res) => {
 }
 
 const show = (req, res) => {
-    const foundEvent = eventModel.findEvent(req.params.id);
+    const foundEvent = eventModel.findEvent(req.params.eventId);
     res.json(foundEvent);
 }
 
 const update = (req, res) => {
     const { title, description, date, maxSeats } = req.body;
-    const modifiedEvent = eventModel.modifyEvent(req.params.id, { title, description, date, maxSeats })
+    const modifiedEvent = eventModel.modifyEvent(req.params.eventId, { title, description, date, maxSeats })
     res.json({
         message: 'An event has been succesfully modified',
         modifiedEvent
@@ -49,7 +49,7 @@ const update = (req, res) => {
 }
 
 const destroy = (req, res) => {
-    eventModel.deleteEvent(req.params.id);
+    eventModel.deleteEvent(req.params.eventId);
     res.json({
         message: `Successfully deleted the event with id ${req.params.id}`,
     });

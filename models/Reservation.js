@@ -12,4 +12,8 @@ module.exports = class Reservation {
         this.email = email;
         this.eventId = eventId;
     }
+
+    static getAllReservations() {
+        return require('../db/reservations.json');
+    }
 }

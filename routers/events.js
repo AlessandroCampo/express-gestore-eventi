@@ -14,10 +14,10 @@ router.use(express.urlencoded({ extended: true }))
 
 router.get('/', eventsController.index);
 router.post('/', validateStoreEventData, eventsController.store);
-router.put('/:id', eventExists, eventsController.update);
-router.get('/:id', eventExists, eventsController.show);
-router.delete('/:id', eventExists, eventsController.destroy);
+router.put('/:eventId', eventExists, eventsController.update);
+router.get('/:eventId', eventExists, eventsController.show);
+router.delete('/:eventId', eventExists, eventsController.destroy);
 
-router.use('/:id/reservations', reservationRouter);
+router.use('/:eventId/reservations', reservationRouter);
 
 module.exports = router;
