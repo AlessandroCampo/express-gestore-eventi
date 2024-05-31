@@ -1,19 +1,5 @@
 [
     {
-        "id": 1,
-        "title": "Taylor Swift Live",
-        "description": "An unforgettable night with Taylor Swift performing her greatest hits.",
-        "date": "2024-08-10",
-        "maxSeats": 20000
-    },
-    {
-        "id": 2,
-        "title": "Coldplay: Music of the Spheres Tour",
-        "description": "Experience Coldplay live with their new album tour.",
-        "date": "2024-09-05",
-        "maxSeats": 30000
-    },
-    {
         "id": 3,
         "title": "Ed Sheeran: Mathematics Tour",
         "description": "Join Ed Sheeran for a night of incredible music from his latest albums.",
@@ -28,10 +14,60 @@
         "maxSeats": 22000
     },
     {
-        "id": 5,
-        "title": "The Weeknd: After Hours Til Dawn Tour",
-        "description": "The Weeknd performs his chart-topping hits live on stage.",
-        "date": "2024-08-20",
-        "maxSeats": 28000
+        "newEvent": {
+            "title": "Updated New Year Concert",
+            "description": "Celebrate the new year with an even more amazing concert!",
+            "date": "2024-12-31",
+            "maxSeats": 20000
+        }
+    },
+    {
+        "id": "3fbbb6b52wlwufd8um",
+        "title": "Taylor Swift Live",
+        "description": "An unforgettable night with Taylor Swift performing her greatest hits.",
+        "date": "2024-08-10",
+        "maxSeats": 20000
+    },
+    {
+        "id": "3fbbb6bgeclwufejyb",
+        "title": "Taylor Swift Live",
+        "description": "An unforgettable night with Taylor Swift performing her greatest hits.",
+        "date": "2024-08-10",
+        "maxSeats": 20000
+    },
+    {
+        "id": "3fbbb6bgvclwufeo9q",
+        "title": "Taylor Swift Live",
+        "description": "An unforgettable night with Taylor Swift performing her greatest hits.",
+        "date": "2024-08-10",
+        "maxSeats": 20000
+    },
+    {
+        "id": "3fbbb6b3h0lwufg26d",
+        "title": "Taylor Swift Live",
+        "description": "An unforgettable night with Taylor Swift performing her greatest hits.",
+        "date": "2024-08-10",
+        "maxSeats": 20000
+    },
+    {
+        "id": "3fbbb6bg80lwufg6f3",
+        "title": "Taylor Swift Live",
+        "description": "An unforgettable night with Taylor Swift performing her greatest hits.",
+        "date": "2024-08-10",
+        "maxSeats": 20000
+    },
+    {
+        "id": "3fbbb6bgq0lwug7js4",
+        "title": "Updated New Year Concert",
+        "description": "Celebrate the new year with an even more amazing concert!",
+        "date": "2024-12-31",
+        "maxSeats": 20000
+    },
+    {
+        "id": "3fbbb6be2glwug9xe7",
+        "title": "Updated New Year Concert",
+        "description": "Celebrate the new year with an even more amazing concert!",
+        "date": "2024-12-31",
+        "maxSeats": 20000
     }
 ]

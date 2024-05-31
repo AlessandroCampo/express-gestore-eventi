@@ -18,5 +18,10 @@
   },
   "devDependencies": {
     "morgan": "^1.10.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.json"
+    ]
   }
 }
