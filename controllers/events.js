@@ -51,7 +51,7 @@ const update = (req, res) => {
 const destroy = (req, res) => {
     eventModel.deleteEvent(req.params.eventId);
     res.json({
-        message: `Successfully deleted the event with id ${req.params.id}`,
+        message: `Successfully deleted the event with id ${req.params.eventId}`,
     });
 }
 

@@ -19,8 +19,8 @@ router.get('/:eventId', eventExists, eventsController.show);
 router.delete('/:eventId', eventExists, eventsController.destroy);
 
 router.get('/:eventId/reservations', reservationController.index);
-router.post('/:eventId/reservations', reservationController.index);;
-router.delete('/:eventId/:reservationId', reservationController.destroy);
+router.post('/:eventId/reservations', reservationController.store);;
+router.delete('/:eventId/reservations/:reservationId', reservationController.destroy);
 
 
 module.exports = router;

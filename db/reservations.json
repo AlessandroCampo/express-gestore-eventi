@@ -138,5 +138,10 @@
         "lastName": "Jackson",
         "email": "harper@example.com",
         "eventId": 15
+    },
+    {
+        "id": "res-3fbbb6bkfglwuokjt8",
+        "firstName": "Alessandro",
+        "lastName": "Campo"
     }
 ]

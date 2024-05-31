@@ -23,7 +23,6 @@ module.exports = class Model {
 
     static getReservations(id) {
         const convertedID = Number(id);
-        console.log(convertedID);
         return reservationModel.getAllReservations().filter(r => r.eventId == convertedID);
     }
 

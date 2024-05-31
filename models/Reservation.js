@@ -1,7 +1,7 @@
 const uniquid = require('uniqid')
 const fs = require('fs');
 const path = require('path');
-const dbPath = path.join(process.cwd(), 'db', 'events.json');
+const dbPath = path.join(process.cwd(), 'db', 'reservations.json');
 
 module.exports = class Reservation {
     id
@@ -11,10 +11,22 @@ module.exports = class Reservation {
         this.lastName = lastName;
         this.email = email;
         this.eventId = eventId;
+        Reservation.create(this);
     }
 
     static getAllReservations() {
-        console.log(require('../db/reservations.json'));
         return require('../db/reservations.json');
+    }
+
+    static create(newReservation) {
+        const newEvents = JSON.stringify([...Reservation.getAllReservations(), { ...newReservation }]);
+        fs.writeFileSync(dbPath, newEvents, 'utf-8');
+        console.log(`Successfully created a new reservation for ${newReservation.firstName} ${newReservation.lastName}`);
+    }
+
+    static delete(id) {
+        const convertedId = Number(id);
+        const newData = JSON.stringify(Reservation.getAllReservations().filter(e => e.id !== convertedId));
+        fs.writeFileSync(dbPath, newData, 'utf-8');
     }
 }
