@@ -1,6 +1,6 @@
 [
     {
-        "id": 6,
+        "id": "event-6",
         "title": "Beyoncé: The Formation World Tour",
         "description": "Experience the electrifying performance of Beyoncé as she dazzles the stage with her iconic hits.",
         "date": "2024-09-15",
@@ -8,7 +8,7 @@
         "availableSeats": 30000
     },
     {
-        "id": 7,
+        "id": "event-7",
         "title": "Coldplay: A Head Full of Dreams Tour",
         "description": "Join Coldplay for an unforgettable night filled with their mesmerizing music and spectacular visuals.",
         "date": "2024-10-20",
@@ -16,7 +16,7 @@
         "availableSeats": 35000
     },
     {
-        "id": 8,
+        "id": "event-8",
         "title": "Adele: Live in Concert",
         "description": "Don't miss Adele's powerful and emotional performances as she showcases her incredible vocals.",
         "date": "2024-11-05",
@@ -24,7 +24,7 @@
         "availableSeats": 28000
     },
     {
-        "id": 9,
+        "id": "event-9",
         "title": "Bruno Mars: 24K Magic World Tour",
         "description": "Get ready to dance the night away with Bruno Mars as he brings his infectious energy and catchy tunes to the stage.",
         "date": "2025-01-10",
@@ -32,7 +32,7 @@
         "availableSeats": 32000
     },
     {
-        "id": 10,
+        "id": "event-10",
         "title": "Lady Gaga: The Chromatica Ball Tour",
         "description": "Step into the vibrant world of Lady Gaga as she performs songs from her latest album, Chromatica, live on stage.",
         "date": "2025-02-20",
@@ -40,7 +40,7 @@
         "availableSeats": 30000
     },
     {
-        "id": 11,
+        "id": "event-11",
         "title": "Justin Bieber: Justice World Tour",
         "description": "Experience the magic of Justin Bieber's music as he embarks on his highly anticipated world tour.",
         "date": "2025-03-15",
@@ -48,7 +48,7 @@
         "availableSeats": 35000
     },
     {
-        "id": 12,
+        "id": "event-12",
         "title": "Katy Perry: Witness: The Tour",
         "description": "Witness Katy Perry's dynamic performances and colorful visuals as she takes you on a journey through her hit songs.",
         "date": "2025-04-20",
@@ -56,7 +56,7 @@
         "availableSeats": 28000
     },
     {
-        "id": 13,
+        "id": "event-13",
         "title": "Maroon 5: Red Pill Blues Tour",
         "description": "Join Maroon 5 for a night of infectious pop tunes and energetic performances from their Red Pill Blues album.",
         "date": "2025-05-10",
@@ -64,7 +64,7 @@
         "availableSeats": 32000
     },
     {
-        "id": 14,
+        "id": "event-14",
         "title": "Rihanna: Anti World Tour",
         "description": "Experience Rihanna's powerful vocals and captivating stage presence as she performs tracks from her album, Anti.",
         "date": "2025-06-20",
@@ -72,7 +72,7 @@
         "availableSeats": 30000
     },
     {
-        "id": 15,
+        "id": "event-15",
         "title": "Shawn Mendes: Wonder: The World Tour",
         "description": "Be captivated by Shawn Mendes' soulful voice and heartfelt performances as he embarks on his Wonder World Tour.",
         "date": "2025-07-15",

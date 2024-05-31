@@ -22,8 +22,7 @@ module.exports = class Model {
     };
 
     static getReservations(id) {
-        const convertedID = Number(id);
-        return reservationModel.getAllReservations().filter(r => r.eventId == convertedID);
+        return reservationModel.getAllReservations().filter(r => r.eventId == id);
     }
 
     static filterEvents(query) {
@@ -51,7 +50,7 @@ module.exports = class Model {
     };
 
     static findEvent(id) {
-        return Model.getEvents().find(e => e.id === Number(id));
+        return Model.getEvents().find(e => e.id == id);
     }
 
     static deleteEvent(id) {
@@ -61,9 +60,8 @@ module.exports = class Model {
     }
 
     static modifyEvent(id, newEvent) {
-        const convertedID = Number(id)
         const updatedEvents = Model.getEvents().map(event => {
-            if (event.id === convertedID) {
+            if (event.id == id) {
                 const updatedEvent = {
                     ...event,
                     title: newEvent.title !== undefined ? newEvent.title : event.title,
@@ -77,7 +75,7 @@ module.exports = class Model {
         });
         fs.writeFileSync(dbPath, JSON.stringify(updatedEvents), 'utf8');
         console.log(`Successfully modified an event with id ${id}`)
-        return Model.findEvent(convertedID);
+        return Model.findEvent(id);
     }
 
 

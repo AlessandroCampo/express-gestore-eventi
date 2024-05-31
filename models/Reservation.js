@@ -19,9 +19,7 @@ module.exports = class Reservation {
     }
 
     static find(id) {
-        const convertedID = Number(id);
-        console.log(Reservation.getAllReservations().find(r => r.id === convertedID))
-        return Reservation.getAllReservations().find(r => r.id === convertedID);
+        return Reservation.getAllReservations().find(r => r.id == id);
     }
 
     static create(newReservation) {
@@ -31,8 +29,7 @@ module.exports = class Reservation {
     }
 
     static delete(id) {
-        const convertedId = Number(id);
-        const newData = JSON.stringify(Reservation.getAllReservations().filter(e => e.id !== convertedId));
+        const newData = JSON.stringify(Reservation.getAllReservations().filter(e => e.id !== id));
         fs.writeFileSync(dbPath, newData, 'utf-8');
     }
 }
