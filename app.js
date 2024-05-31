@@ -9,6 +9,7 @@ const eventsRouter = require('./routers/events.js');
 
 //global middlewares
 app.use(morgan('dev'));
+app.use(express.static('public'))
 app.use(express.json());
 
 

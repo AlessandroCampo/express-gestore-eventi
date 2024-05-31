@@ -1,15 +1,21 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
 const eventsController = require('../controllers/events.js');
 const reservationController = require('../controllers/reservations.js');
 
 
+
+
 //import and usage middlewares
+const storage = require('../middlewares/storage.js');
 const eventExists = require('../middlewares/eventExists.js');
 const reservationExists = require('../middlewares/reservationExists.js');
 const validateStoreEventData = require('../middlewares/validateStoreEventData.js');
 const validateStoreReservationData = require('../middlewares/validateStoreReservationData.js');
 const isReservationValid = require('../middlewares/isReservationValid.js');
+const upload = multer({ storage });
+
 
 
 router.use(express.urlencoded({ extended: true }))
@@ -18,7 +24,7 @@ router.use(express.urlencoded({ extended: true }))
 
 
 router.get('/', eventsController.index);
-router.post('/', validateStoreEventData, eventsController.store);
+router.post('/', upload.single('image'), validateStoreEventData, eventsController.store);
 router.use('/:eventId', eventExists);
 router.put('/:eventId', eventsController.update);
 router.get('/:eventId', eventsController.show);
