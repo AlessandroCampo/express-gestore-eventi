@@ -18,6 +18,12 @@ module.exports = class Reservation {
         return require('../db/reservations.json');
     }
 
+    static find(id) {
+        const convertedID = Number(id);
+        console.log(Reservation.getAllReservations().find(r => r.id === convertedID))
+        return Reservation.getAllReservations().find(r => r.id === convertedID);
+    }
+
     static create(newReservation) {
         const newEvents = JSON.stringify([...Reservation.getAllReservations(), { ...newReservation }]);
         fs.writeFileSync(dbPath, newEvents, 'utf-8');

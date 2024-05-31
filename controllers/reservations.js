@@ -9,6 +9,7 @@ const index = (req, res) => {
 }
 
 
+
 const store = (req, res) => {
     const { firstName, lastName, email } = req.body;
     const { eventId } = req.params;
