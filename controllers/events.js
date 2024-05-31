@@ -1,3 +1,8 @@
+const eventModel = require('../models/Event.js');
+
+eventModel.getEvents();
+
+
 const index = (req, res) => {
     res.send('router working');
 }
