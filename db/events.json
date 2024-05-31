@@ -1,1 +1,82 @@
-[{"id":1,"title":"Taylor Swift Live","description":"An unforgettable night with Taylor Swift performing her greatest hits.","date":"2024-08-10","maxSeats":20000,"availableSeats":20000},{"id":2,"title":"titolo modificato a caso"},{"title":"titolo modificato a caso","description":"Join Ed Sheeran for a night of incredible music from his latest albums.","date":"2024-07-25","maxSeats":25000,"availableSeats":20000,"id":3},{"id":4,"title":"Billie Eilish: Happier Than Ever World Tour","description":"Catch Billie Eilish live as she performs tracks from her latest album.","date":"2024-06-30","maxSeats":22000,"availableSeats":20000},{"id":5,"title":"The Weeknd: After Hours Til Dawn Tour","description":"The Weeknd performs his chart-topping hits live on stage.","date":"2024-08-20","maxSeats":28000,"availableSeats":20000},{"id":"3fbbb6bep8lwuixknk","title":"Titolo creato a caso"},{"id":"3fbbb6bh44lwujcsxs","title":"Titolo creato a caso"},{"id":"3fbbb6bgi8lwujj7vv","title":"Titolo creato a caso","description":"Descrizione creata  a caso","date":"2030-12-12","maxSeats":"1200","availableSeats":"1200"}]
+[
+    {
+        "id": 6,
+        "title": "Beyoncé: The Formation World Tour",
+        "description": "Experience the electrifying performance of Beyoncé as she dazzles the stage with her iconic hits.",
+        "date": "2024-09-15",
+        "maxSeats": 30000,
+        "availableSeats": 30000
+    },
+    {
+        "id": 7,
+        "title": "Coldplay: A Head Full of Dreams Tour",
+        "description": "Join Coldplay for an unforgettable night filled with their mesmerizing music and spectacular visuals.",
+        "date": "2024-10-20",
+        "maxSeats": 35000,
+        "availableSeats": 35000
+    },
+    {
+        "id": 8,
+        "title": "Adele: Live in Concert",
+        "description": "Don't miss Adele's powerful and emotional performances as she showcases her incredible vocals.",
+        "date": "2024-11-05",
+        "maxSeats": 28000,
+        "availableSeats": 28000
+    },
+    {
+        "id": 9,
+        "title": "Bruno Mars: 24K Magic World Tour",
+        "description": "Get ready to dance the night away with Bruno Mars as he brings his infectious energy and catchy tunes to the stage.",
+        "date": "2025-01-10",
+        "maxSeats": 32000,
+        "availableSeats": 32000
+    },
+    {
+        "id": 10,
+        "title": "Lady Gaga: The Chromatica Ball Tour",
+        "description": "Step into the vibrant world of Lady Gaga as she performs songs from her latest album, Chromatica, live on stage.",
+        "date": "2025-02-20",
+        "maxSeats": 30000,
+        "availableSeats": 30000
+    },
+    {
+        "id": 11,
+        "title": "Justin Bieber: Justice World Tour",
+        "description": "Experience the magic of Justin Bieber's music as he embarks on his highly anticipated world tour.",
+        "date": "2025-03-15",
+        "maxSeats": 35000,
+        "availableSeats": 35000
+    },
+    {
+        "id": 12,
+        "title": "Katy Perry: Witness: The Tour",
+        "description": "Witness Katy Perry's dynamic performances and colorful visuals as she takes you on a journey through her hit songs.",
+        "date": "2025-04-20",
+        "maxSeats": 28000,
+        "availableSeats": 28000
+    },
+    {
+        "id": 13,
+        "title": "Maroon 5: Red Pill Blues Tour",
+        "description": "Join Maroon 5 for a night of infectious pop tunes and energetic performances from their Red Pill Blues album.",
+        "date": "2025-05-10",
+        "maxSeats": 32000,
+        "availableSeats": 32000
+    },
+    {
+        "id": 14,
+        "title": "Rihanna: Anti World Tour",
+        "description": "Experience Rihanna's powerful vocals and captivating stage presence as she performs tracks from her album, Anti.",
+        "date": "2025-06-20",
+        "maxSeats": 30000,
+        "availableSeats": 30000
+    },
+    {
+        "id": 15,
+        "title": "Shawn Mendes: Wonder: The World Tour",
+        "description": "Be captivated by Shawn Mendes' soulful voice and heartfelt performances as he embarks on his Wonder World Tour.",
+        "date": "2025-07-15",
+        "maxSeats": 35000,
+        "availableSeats": 35000
+    }
+]
