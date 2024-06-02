@@ -15,8 +15,8 @@ const register = (req, res) => {
     })
 };
 
-const login = (req, res) => {
-    const { username, id } = UserModel.find(req.body.username, req.body.password);
+const login = async (req, res) => {
+    const { username, id } = await UserModel.find(req.body.username, req.body.password);
     const token = generateToken({ username, id });
     return res.json(token);
 }
@@ -35,6 +35,7 @@ const destroy = (req, res) => {
 
 const getReservations = (req, res) => {
     const userId = req.user.id;
+    console.log(userId)
     return res.json(UserModel.getReservations(userId));
 }
 

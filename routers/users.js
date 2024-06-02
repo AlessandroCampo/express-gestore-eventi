@@ -12,3 +12,5 @@ router.post('/register', userController.register);
 router.post('/login', validateLoginData, userController.login);
 router.get('/events', auth, userController.getReservations);
 router.get('/delete', auth, userController.destroy);
+
+module.exports = router;

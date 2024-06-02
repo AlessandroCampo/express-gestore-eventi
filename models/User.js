@@ -1,17 +1,17 @@
 const path = require('path');
 const fs = require('fs');
-const dbPath = path.join(process.cwd, 'db', 'users.json');
+const dbPath = path.join(__dirname, '..', 'db', 'users.json');
 const bcrypt = require('bcrypt');
 const uniqid = require('uniqid');
 const ReservationModel = require('../models/Reservation.js');
 
 module.exports = class User {
     id
-    constructor({ mail, username, bithdate, nationality, password }) {
+    constructor({ mail, username, birthdate, nationality, password }) {
         this.id = uniqid('user-');
         this.mail = mail;
         this.username = username;
-        this.bithdate = bithdate;
+        this.birthdate = birthdate;
         this.nationality = nationality;
         this.password = password;
         User.create(this);
@@ -21,16 +21,19 @@ module.exports = class User {
         return require('../db/users.json');
     }
 
-    static create(newUser) {
+    static async create(newUser) {
+        newUser.password = await bcrypt.hash(newUser.password, 10);
         const users = User.all();
-        const newUsers = [...users, newUser];
+        const newUsers = JSON.stringify([...users, newUser]);
         fs.writeFileSync(dbPath, newUsers);
         return newUser;
     }
 
     static async find(username, password) {
         const user = User.all().find(u => u.username === username);
+        console.log(user);
         const match = await bcrypt.compare(password, user.password);
+        console.log(match);
         return match ? user : null;
     }
 

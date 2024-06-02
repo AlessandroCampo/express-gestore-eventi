@@ -7,6 +7,7 @@ const cors = require('cors');
 
 //router imports
 const eventsRouter = require('./routers/events.js');
+const usersRouter = require('./routers/users.js');
 
 //global middlewares
 app.use(morgan('dev'));
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/events', eventsRouter);
+app.use('/users', usersRouter)
 
 
 
@@ -29,7 +31,7 @@ app.use((req, res, next) => {
 });
 
 app.use((err, req, res, next) => {
-    console.log(err.status);
+    console.error(err);
     const errorStatus = err.status || 500;
     res.status(errorStatus).json({
         error: err.message

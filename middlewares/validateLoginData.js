@@ -10,7 +10,7 @@ module.exports = async (req, res, next) => {
     if (!foundUser) {
         throw new CustomError('Invalid username or password', 401)
     }
-    req.user = user;
+    req.user = foundUser;
     next();
 
 }
