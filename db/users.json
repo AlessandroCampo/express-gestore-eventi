@@ -1,0 +1,82 @@
+[
+    {
+        "id": "user-1",
+        "mail": "john.doe@example.com",
+        "username": "john_doe",
+        "birthdate": "1985-02-15",
+        "nationality": "American",
+        "password": "password123"
+    },
+    {
+        "id": "user-2",
+        "mail": "jane.smith@example.com",
+        "username": "jane_smith",
+        "birthdate": "1990-07-22",
+        "nationality": "British",
+        "password": "password456"
+    },
+    {
+        "id": "user-3",
+        "mail": "michael.brown@example.com",
+        "username": "michael_b",
+        "birthdate": "1988-11-05",
+        "nationality": "Canadian",
+        "password": "password789"
+    },
+    {
+        "id": "user-4",
+        "mail": "linda.jones@example.com",
+        "username": "linda_jones",
+        "birthdate": "1992-04-10",
+        "nationality": "Australian",
+        "password": "password101"
+    },
+    {
+        "id": "user-5",
+        "mail": "david.miller@example.com",
+        "username": "david_m",
+        "birthdate": "1983-09-17",
+        "nationality": "German",
+        "password": "password202"
+    },
+    {
+        "id": "user-6",
+        "mail": "susan.wilson@example.com",
+        "username": "susan_w",
+        "birthdate": "1995-03-25",
+        "nationality": "French",
+        "password": "password303"
+    },
+    {
+        "id": "user-7",
+        "mail": "robert.moore@example.com",
+        "username": "robert_moore",
+        "birthdate": "1987-12-12",
+        "nationality": "Spanish",
+        "password": "password404"
+    },
+    {
+        "id": "user-8",
+        "mail": "karen.taylor@example.com",
+        "username": "karen_t",
+        "birthdate": "1991-06-30",
+        "nationality": "Italian",
+        "password": "password505"
+    },
+    {
+        "id": "user-9",
+        "mail": "james.anderson@example.com",
+        "username": "james_anderson",
+        "birthdate": "1984-01-19",
+        "nationality": "Japanese",
+        "password": "password606"
+    },
+    {
+        "id": "user-10",
+        "mail": "patricia.thomas@example.com",
+        "username": "patricia_t",
+        "birthdate": "1993-08-08",
+        "nationality": "Mexican",
+        "password": "password707"
+    }
+]

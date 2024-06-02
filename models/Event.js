@@ -5,13 +5,14 @@ const dbPath = path.join(process.cwd(), 'db', 'events.json');
 const reservationModel = require('../models/Reservation.js');
 module.exports = class Model {
     id
-    constructor({ title, description, date, maxSeats }) {
+    constructor({ title, description, date, maxSeats, venueAddress }) {
         this.id = uniquid('event-');
         this.title = title;
         this.description = description;
         this.date = date;
         this.maxSeats = maxSeats;
         this.availableSeats = maxSeats;
+        this.venueAddress = venueAddress;
         Model.createEvent(this);
     }
 

@@ -3,12 +3,14 @@ const app = express();
 require('dotenv').config();
 const port = process.env.PORT || 3000;
 const morgan = require('morgan');
+const cors = require('cors');
 
 //router imports
 const eventsRouter = require('./routers/events.js');
 
 //global middlewares
 app.use(morgan('dev'));
+app.use(cors());
 app.use(express.static('public'))
 app.use(express.json());
 

@@ -7,17 +7,24 @@ const dbPath = path.join(process.cwd(), 'db', 'reservations.json');
 
 module.exports = class Reservation {
     id
-    constructor({ firstName, lastName, email, eventId }) {
+    constructor({ firstName, lastName, email, eventId, userId }) {
         this.id = uniquid('res-');
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.eventId = eventId;
+        this.userId = userId;
         Reservation.create(this);
     }
 
     static getAllReservations() {
         return require('../db/reservations.json');
+    }
+
+    static getUser(reservationId) {
+        const User = require('../models/User.js');
+        const foundReservation = Reservation.getAllReservations().find(r => r.id == reservationId);
+        return User.all().find(u => u.id == foundReservation.userId);
     }
 
     static find(id) {
