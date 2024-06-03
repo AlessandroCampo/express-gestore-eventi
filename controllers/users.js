@@ -7,7 +7,7 @@ const index = (req, res) => {
 };
 
 const register = (req, res) => {
-    const { username, mail, password, nationality, birthdate } = req.body;
+    const { username, mail, firstName, lastName, password, nationality, birthdate } = req.body;
     const newUser = new UserModel({ username, mail, password, nationality, birthdate });
     return res.json({
         message: 'New user succesfully created',

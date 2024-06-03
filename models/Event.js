@@ -18,7 +18,7 @@ module.exports = class Model {
 
 
     static getEvents() {
-        return require('../db/events.json')
+        return require('../db/events.json');
     };
 
     static getReservations(id) {

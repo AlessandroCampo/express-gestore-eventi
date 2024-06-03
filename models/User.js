@@ -7,10 +7,12 @@ const ReservationModel = require('../models/Reservation.js');
 
 module.exports = class User {
     id
-    constructor({ mail, username, birthdate, nationality, password }) {
+    constructor({ mail, username, firstName, lastName, birthdate, nationality, password }) {
         this.id = uniqid('user-');
         this.mail = mail;
         this.username = username;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.birthdate = birthdate;
         this.nationality = nationality;
         this.password = password;
