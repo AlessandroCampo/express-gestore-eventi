@@ -14,7 +14,8 @@ const store = (req, res) => {
 
     const { firstName, lastName, email } = req.body;
     const { eventId } = req.params;
-    const newRes = new reservationModel({ firstName, lastName, email, eventId })
+    const userId = req.user.id;
+    const newRes = new reservationModel({ email, eventId, userId })
     res.json({
         message: 'Your reservation has been succesfully created',
         newRes
